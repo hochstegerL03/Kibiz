@@ -1,0 +1,128 @@
+body
+{
+    font-family: 'Arial Black', sans-serif;
+}
+
+.carousel-inner .carousel-item img {
+    height: 66vh;
+    width:  100%;
+    object-fit: cover;
+    opacity: 0.65;  
+}
+
+.carousel-inner{
+    background-color: rgb(128,0,128, 0.65)
+}
+#carousel_container{
+    height: 66vh;
+    width: 100%;
+    position: relative;
+}
+#carousel_overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 1 !;
+    text-align: center;
+    color: white;
+    font-family: 'Lobster', sans-serif;
+}
+
+.justify-self-end{
+    position: absolute;
+    bottom: 0 !important;
+    margin-right: 5%;
+}
+
+.appearingText{
+    opacity: 0;
+    overflow: hidden;
+    transform: translateY(100%);
+    transition: opacity 1s ease, transform 1s ease;
+
+    }
+
+.appearingText.appear{
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.block-reveal {
+
+    .teamMessage {
+       height: 1.5rem;
+       position: relative;  
+
+      .block {
+        width: 0%;
+        height: inherit;
+        background: purple;
+        position: absolute;
+        animation: blockReveal 2s cubic-bezier(.74, .06, .4, .92) forwards;
+ 
+      }
+
+      .fadeIn {
+        -webkit-animation: fadeIn 2s forwards;
+        -o-animation: fadeIn 2s forwards;
+        animation: fadeIn 2s forwards;
+        animation-delay: 1.6s;
+        opacity: 0;
+         }
+    }
+}
+
+@keyframes blockReveal {
+  0% {
+    width: 0%;
+    left: 0;
+
+  }
+  50% {
+    width: 100%;
+    left: 0;
+
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.block-reveal .block:nth-of-type(2){
+    animation-delay: 2s;
+}
+
+.block-reveal .fadeIn:nth-of-type(2){
+    animation-delay: 3.5s;
+}
+
+
+.textBubble{
+  background-color: rgb(53,184,211, 1);
+  padding: 30px;
+  max-width: 500px;
+  border-radius: 20px 20px 20px 5px;
+  color:white
+}
+
+footer div{
+  font-size: 0.75rem;
+}
+
